@@ -1,12 +1,18 @@
-<!<!DOCTYPE html>
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title></title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link href="css/style.css" rel="stylesheet">
+    </head>
+    <body>
+    
+    </body>
+</html>
 <html>
     <title>Solitude</title>
     <head> 
-    <?php
-    include 'C:\xampp\htdocs\baitap\connect\config.php';
-    $sql_sp="SELECT HinhAnh FROM sanpham ORDER BY id_MonAn DESC limit 3";
-    $query_sp=mysqli_query($conn,$sql_sp);
-    ?>
     <link rel="stylesheet" type="text/css" href="style.css"> 
     <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -36,21 +42,8 @@
                         <p>Mochi là một loại bánh truyền thống của Nhật Bản với lớp vỏ bằng bột gạo dẻo thuần khiết là  m từ gạo Mochi. Từ ngàn xưa Mochi đã là món bánh của sự gắn kết gia đình và bè bạn. Ngày nay, mỗi chiếc bánh tượng trưng cho lời cầu chúc may mắn, thịnh vượng và hơn tất cả, là sự sum vầy - Mochi mang đến sự gắn bó và chia sẻ niềm vui.
 
     Sự tuyệt hảo của Mochi có thể cảm nhận ngay ở miếng đầu tiên. Nhưng bạn khó có thể biết những bí quyết riêng ẩn trong hương vị ngọt ngào quyến rũ ấy. Điều khiến Mochi thơm ngon đặc biệt chính là ở sự khéo léo và chỉnh chu đến từng chi tiết trong quá trình tạo ra chiếc bánh. Chúng tôi tin làm bánh Mochi là một môn nghệ thuật - bắt đầu bằng những nguyên liệu cao cấp.</p>
-                <div class="sos">
-                <div class="GTMonMoi"><p> Món mới của chúng mình</p></div>
-                <?php 
-                while($row_sp = mysqli_fetch_array($query_sp))
-                {
-                    ?>
-                    <a href="menu.php">
-                        <img src="ThemHinh/<?php echo $row_sp['HinhAnh'] ?>"style="width:310px;height:200px; padding-top: 4px; padding-left:4px;">
-                    </a>
-                <?php
-                }
-                ?>
                 <button type="button" onclick="location.href='menu.php';" class="csw-btn-button" >Cùng mình xem qua Menu nào</button>
-                </div>
-                </div>
+
                 <div style="width:30%;float:right;" class="GioiThieuP">
                         <img src="image/desktop-wallpaper-pin-on-mochi-mochi-panda-cute-mochi-thumbnail.jpg">
             </div>
