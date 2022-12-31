@@ -61,10 +61,33 @@
             </div>         
     </div>
     <div class="clear"></div>
-            <div class="footer">
-                        <p>Công Ty TNHH 1TV SOLITUDE MOCHI</p>
-                        <p>Địa chỉ: 390 Hoàng Văn Thụ, Phường 4,Tân Bình,TP.Hồ Chí Minh</p>
+    <div class="footer">
+           <div class="container">
+            <div class="row">
+                <div class="row-col">
+                    <h4></h4>
+                    <ul>
+                        <li>
+                        <div class="logof"><img src="image/320577066_568785604679266_5437479403153405636_n.png" style="width:100px"></div>
+                        </li>
+                        <li><h6>COPYRIGHT COPYRIGHT © 2023 SOLITUDE MOCHI</h6></li>
+                    </ul>
+                </div>
+                <div class="row-col">
+                    <h4>Liên Hệ</h4>
+                    <ul>
+                        <li> <p>Công Ty TNHH 1TV SOLITUDE MOCHI</p></li>
+                        <li><p>Địa chỉ: 390 Hoàng Văn Thụ, Phường 4,Tân Bình,TP.Hồ Chí Minh</p></li>
+                        <li>  <p>SĐT:0981814415</p> </li>
+                        <a href="#"></a>
+                        </li>
+                    </ul>
+                </div>
+               
             </div>
+           </div>
+
+        </div>
     </div>
     </body>
    

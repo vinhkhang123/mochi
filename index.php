@@ -3,7 +3,7 @@
     <title>Solitude</title>
     <head> 
     <?php
-    include 'C:\xampp\htdocs\baitap\connect\config.php';
+    include 'connect\config.php';
     $sql_sp="SELECT HinhAnh FROM sanpham ORDER BY id_MonAn DESC limit 3";
     $query_sp=mysqli_query($conn,$sql_sp);
     ?>
@@ -80,11 +80,23 @@
                         </li>
                     </ul>
                 </div>
+                <div class="row-col">
+                    <h4>Mạng Xã Hội </h4>
+                    <ul>
+                        <li> <a href="https://www.facebook.com/banhmi0501"><ion-icon name="logo-facebook"></ion-icon></a></li>
+                        <li> <a href="https://www.youtube.com"><ion-icon name="logo-youtube"></ion-icon></a></li>
+                        <li>  <a href="https://www.instagram.com/banh_mieii/"><ion-icon name="logo-instagram"></ion-icon></p> </li>
+                        <a href="#"></a>
+                        </li>
+                    </ul>
+                </div>
                
             </div>
            </div>
 
         </div>
+        <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+<script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
     </body>
    
 </html>
