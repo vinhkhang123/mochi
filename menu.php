@@ -16,52 +16,53 @@
     </style>
     <title>MeNu</title>
     </head>
-    <body>
-    <div class="wrapper">
-        <div class="menu">
-            <div class="MenuItem"> 
-                
-            <label for="openNaV" class="openNaV">
-                <div class="logo"><img src="image/320577066_568785604679266_5437479403153405636_n.png" style="width:100px;"></div>
-            </label>
-                <nav>
-                        <a href="index.php">Trang Chủ</a>
-                        <a href="menu.php">Menu</a>
-                        <a>Liên Hệ</a>
-                        <a>Đăng Nhập</a>
-                        <div class="HoatAnh start-home"></div>
-                </nav>    
-        
+    <body style="background-color:#FFE4E1;">
+    <div class="main">
+    <div class="menu">
+        <div class="MenuItem"> 
+              
+        <label for="openNaV" class="openNaV">
+            <div class="logo"><img src="image/320577066_568785604679266_5437479403153405636_n.png" style="width:100px"></div>
+        </label>
+            <nav>
+                    <a href="index.php">Trang Chủ</a>
+                    <a href="menu.php">Menu</a>
+                    <a>Liên Hệ</a>
+                    <a>Đăng Nhập</a>
+                    <div class="HoatAnh start-home"></div>
+            </nav>    
+       
+        </div>
+    </div>
+    <div class="body">
+            <div class="product"> 
+                        <?php 
+                        while($row_sp = mysqli_fetch_array($query_sp))
+                        {
+                            ?>
+                        <div class="card">
+                            <div class="thumb"> 
+                                <img  src="ThemHinh/<?php echo $row_sp['HinhAnh'] ?>">
+                            </div>
+                                <div class="desc">
+                                    <h3>Thông Tin Món Ăn</h3>
+                                    <div class="name"><p class="Ten_sp">Tên Món Ăn:<?php echo $row_sp['TenMon'] ?></p>
+                                    <p class="Mo_ta">Mô Tả:<?php echo $row_sp['MoTa'] ?></p></div>
+                                    <div class="other-info">
+                                        <span class="Gia"><?php echo number_format($row_sp['Gia'],0,',','.').' vnđ' ?></span>
+                                    </div>
+                                </div>
+                        </div>
+                        <?php
+                        }
+                        ?>   
+            </div>         
+    </div>
+    <div class="clear"></div>
+            <div class="footer">
+                        <p>Công Ty TNHH 1TV SOLITUDE MOCHI</p>
+                        <p>Địa chỉ: 390 Hoàng Văn Thụ, Phường 4,Tân Bình,TP.Hồ Chí Minh</p>
             </div>
-        </div>
-        <div id="main">
-            <div class="maincontent">
-                <ul class="product_list">
-                    <?php 
-                    while($row_sp = mysqli_fetch_array($query_sp))
-                    {
-                        ?>
-                    <li>
-                        <a href="">
-                            <img src="ThemHinh/<?php echo $row_sp['HinhAnh'] ?>">
-                            <b><p class="Ten_sp">Tên Món Ăn:<?php echo $row_sp['TenMon'] ?></p>
-                            <p class="Gia">Giá :<?php echo number_format($row_sp['Gia'],0,',','.').' vnđ' ?></p>
-                            <p class="Mo_ta">Mô Tả:<?php echo $row_sp['MoTa'] ?></p>
-                            </b>
-                        </a>
-                    </li> 
-                    <?php
-                    }
-                    ?>   
-                </ul>
-
-            </div>
-        </div>
-        <div class="clear"></div>
-        <div class="footer">
-                    <p>Công Ty TNHH 1TV SOLITUDE MOCHI</p>
-                    <p>Địa chỉ: 390 Hoàng Văn Thụ, Phường 4,Tân Bình,TP.Hồ Chí Minh</p>
-        </div>
     </div>
     </body>
    

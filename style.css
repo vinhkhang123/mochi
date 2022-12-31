@@ -118,11 +118,37 @@ a:nth-child(4)
 .footer
 {
     height: 150px;
-    width: 100%;
     background: #070707;
     color: azure;
     padding-top: 10px;
     padding-bottom:10px;
+    position: absolute;
+    justify-content: space-around;
+    float: left;
+    padding: 70px 0;
+}
+.container
+{
+    max-width: 1170px;
+    margin: auto; 
+    background-color: rgb(0, 136, 255);
+}
+.row
+{
+    display: flex;
+    flex-wrap: wrap;
+}
+.row-col1
+{
+    width: 50%;
+    padding-left: 0;
+    padding-right: 0;
+    float: left;
+}
+.row-col2
+{
+    width: 50%;
+    float: right;
 }
 .GioiThieu
 {

@@ -17,7 +17,7 @@ if(isset($_POST['themMon']))
    header('Location:http://localhost/baitap/lietke.php');
 }elseif(isset($_POST['suasanpham']))
 {
-    if($HinhAnh!=''){
+    if($_FILES['$HinhAnh']){
         move_uploaded_file($HinhAnh_tmp,'ThemHinh/'.$HinhAnh_time);
     $sql_update ="UPDATE sanpham SET MaMonAn='".$MaMonAn."',HinhAnh='".$HinhAnh_time."',TenMon='".$TenMon."',Gia='".$Gia."',SoLuong='".$SoLuong."',MoTa='".$MoTa."' WHERE id_MonAn='$_GET[idmonan]'";
     $sql="SELECT * FROM sanpham WHERE id_MonAn='$_GET[idmonan]'LIMIT 1";
