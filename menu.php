@@ -1,7 +1,7 @@
 <html>
     <head>
     <?php
-    include 'C:\xampp\htdocs\baitap\connect\config.php';
+    include 'connect\config.php';
     $sql_sp="SELECT * FROM sanpham ";
     $query_sp=mysqli_query($conn,$sql_sp);
     ?>
@@ -28,7 +28,7 @@
                     <a href="index.php">Trang Chủ</a>
                     <a href="menu.php">Menu</a>
                     <a>Liên Hệ</a>
-                    <a>Đăng Nhập</a>
+                    <a>Tin Tức</a>
                     <div class="HoatAnh start-home"></div>
             </nav>    
        

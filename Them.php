@@ -2,7 +2,7 @@
     <head>
     <?php
     include 'C:\xampp\htdocs\baitap\connect\config.php';
-    $sql_sp="SELECT * FROM monan ";
+    $sql_sp="SELECT * FROM sanpham ";
     $query_sp=mysqli_query($conn,$sql_sp);
     ?>
     <link rel="stylesheet" type="text/css" href="style.css"> 

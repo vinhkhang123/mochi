@@ -1,5 +1,5 @@
 <?php
-include 'C:\xampp\htdocs\baitap\connect\config.php';
+include 'connect\config.php';
 $MaMonAn= $_POST['MaMonAn'];
 $HinhAnh=$_FILES['HinhAnh']['name'];
 $HinhAnh_tmp=$_FILES['HinhAnh']['tmp_name'];

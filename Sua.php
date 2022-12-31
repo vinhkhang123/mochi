@@ -1,3 +1,10 @@
+<?php
+if(isset($_GET['action'])=='dangxuat')
+{
+    unset($_SESSION['dangnhap']);
+    header('location:dangnhap.php');
+}
+?>
 <html>
     <head>
     <?php
@@ -27,7 +34,7 @@
                         <a href="index.php">Trang Chủ</a>
                         <a href="menu.php">Menu</a>
                         <a>Liên Hệ</a>
-                        <a>Đăng Nhập</a>
+                        <a href="lietke.php?action=dangxuat">Đăng Xuất</a>
                         <div class="HoatAnh start-home"></div>
                 </nav>    
         

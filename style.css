@@ -14,6 +14,7 @@ html,body
     margin: 0;
     padding: 0;
 }
+
 .menu 
 {
     display:block;
@@ -125,6 +126,7 @@ a:nth-child(4)
     position: absolute;
     justify-content: space-around;
     display: flex;
+    width: 100%;
 }
 .container
 {
@@ -139,10 +141,16 @@ a:nth-child(4)
 }
 .row-col
 {
-    width: 25%;
+    width: 50%;
     padding-left: 0;
     padding-right: 0;
     float: left;
+}
+.row-col h4{
+    text-decoration: none;
+}
+.row-col li{
+    text-decoration: none;
 }
 .GioiThieu
 {
@@ -255,11 +263,7 @@ display: flex;
   {
     margin-left: 10px;
   }
-.logof img
-{
-    margin-left: 100px;
-    padding-left: 100px;
-}
+
 .clear
 {
     clear: both;

@@ -23,7 +23,7 @@
                     <a href="index.php">Trang Chủ</a>
                     <a href="menu.php">Menu</a>
                     <a>Liên Hệ</a>
-                    <a>Đăng Nhập</a>
+                    <a>Tin Tức</a>
                     <div class="HoatAnh start-home"></div>
             </nav>    
        
