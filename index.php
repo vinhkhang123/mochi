@@ -61,16 +61,16 @@
         <div class="footer">
            <div class="container">
             <div class="row">
-                <div class="row-col1">
+                <div class="row-col">
                     <h4></h4>
                     <ul>
                         <li>
-                        <div class="logo"><img src="image/320577066_568785604679266_5437479403153405636_n.png" style="width:100px"></div>
+                        <div class="logof"><img src="image/320577066_568785604679266_5437479403153405636_n.png" style="width:100px"></div>
                         </li>
                         <li><h6>COPYRIGHT COPYRIGHT © 2023 SOLITUDE MOCHI</h6></li>
                     </ul>
                 </div>
-                <div class="row-col2">
+                <div class="row-col">
                     <h4>Liên Hệ</h4>
                     <ul>
                         <li> <p>Công Ty TNHH 1TV SOLITUDE MOCHI</p></li>
@@ -80,6 +80,7 @@
                         </li>
                     </ul>
                 </div>
+               
             </div>
            </div>
 

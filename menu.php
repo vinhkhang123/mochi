@@ -35,11 +35,12 @@
         </div>
     </div>
     <div class="body">
-            <div class="product"> 
+    <div class="product"> 
                         <?php 
                         while($row_sp = mysqli_fetch_array($query_sp))
                         {
                             ?>
+
                         <div class="card">
                             <div class="thumb"> 
                                 <img  src="ThemHinh/<?php echo $row_sp['HinhAnh'] ?>">
@@ -50,9 +51,10 @@
                                     <p class="Mo_ta">Mô Tả:<?php echo $row_sp['MoTa'] ?></p></div>
                                     <div class="other-info">
                                         <span class="Gia"><?php echo number_format($row_sp['Gia'],0,',','.').' vnđ' ?></span>
+                                       
                                     </div>
                                 </div>
-                        </div>
+                        </div>           
                         <?php
                         }
                         ?>   

@@ -228,4 +228,9 @@ a{
      .card:hover .thumb {
         transform: translateX(-150px);
      }
-    
+.muah
+{
+    background:#070707;
+    margin-left: 100px;
+    border-radius: 10px;
+}
