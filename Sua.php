@@ -40,7 +40,6 @@
                 <?php
                 while($row=mysqli_fetch_array($query_Sua_sp))
                 {
-                    unlink('ThemHinh/'.$row['HinhAnh']);
                 ?>
             <form method="POST" action="XuLy.php?idmonan=<?php echo $row['id_MonAn'] ?>" enctype="multipart/form-data">
             <tr>    
