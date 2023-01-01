@@ -74,7 +74,7 @@ if(isset($_GET['action'])=='dangxuat')
                         <td><textarea rows="10" name="MoTa" style="resize:none"><?php echo $row['MoTa'] ?></textarea></td>
                     </tr>
                     <tr>
-                        <td colspan="2"><input type="submit" name="suasanpham" value="Sửa"></td>
+                        <td colspan="2"><input onclick="sua()" type="submit" name="suasanpham" value="Sửa"></td>
                     </tr>
                     <?php
                     
