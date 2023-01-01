@@ -9,12 +9,14 @@ $Gia=$_POST['Gia'];
 $SoLuong=$_POST['SoLuong'];
 $MoTa=$_POST['MoTa'];
 $id_MonAn=$_GET['idmonan'];
+
 if(isset($_POST['themMon']))
 {
     $sql_them="INSERT INTO sanpham(MaMonAn,HinhAnh,TenMon,Gia,SoLuong,MoTa) VALUE ('".$MaMonAn."','".$HinhAnh_time."','".$TenMon."','".$Gia."','".$SoLuong."','".$MoTa."')";
-    mysqli_query($conn,$sql_them);
-    move_uploaded_file($HinhAnh_tmp,'ThemHinh/'.$HinhAnh_time);
-   header('Location:http://localhost/baitap/lietke.php');
+mysqli_query($conn,$sql_them);
+move_uploaded_file($HinhAnh_tmp,'ThemHinh/'.$HinhAnh_time);
+header('Location:http://localhost/baitap/lietke.php');
+
 }elseif(isset($_POST['suasanpham']))
 {
     if($_FILES['$HinhAnh']){
@@ -44,3 +46,4 @@ if(isset($_POST['themMon']))
     header('Location:http://localhost/baitap/lietke.php');
 }
 ?>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>

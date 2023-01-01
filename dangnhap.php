@@ -12,10 +12,23 @@ if(isset($_POST['dangnhap']))
     {
         $_SESSION['dangnhap']=$taikhoan;
         header('Location:lietke.php');
-    }else
+    }elseif($taikhoan='')
     {
-        echo'<script> alert("tài khoản hoặc mật khẩu không đúng") </script>';
-        header('Location:http://localhost/baitap/dangnhap.php');
+        echo '<script language="javascript">';
+        echo 'alert("chưa nhập tài khoản")';
+        echo '</script>';
+    }
+    elseif($matkhau=='')
+    {
+        echo '<script language="javascript">';
+        echo 'alert("chưa nhập mật khẩu")';
+        echo '</script>';
+    }
+    else
+    {
+        echo '<script language="javascript">';
+        echo 'alert("sai tài khoản hoặc mật khẩu")';
+        echo '</script>';
     }
 }
 ?>
@@ -29,14 +42,19 @@ if(isset($_POST['dangnhap']))
         <style>
         body{
             background:#FFE4E1;
+            align-items: center;
+            text-align: center;
+
         }
         .wrapper{
         width:15%;
         margin:0 auto;
+
         }
         .table-login
         {
-            width:100%
+            width:100%;
+            text-align: center;
         }
         .table-login tr td
         {
@@ -61,12 +79,13 @@ if(isset($_POST['dangnhap']))
                     <td><input type="password" name="password"></td>
                 </tr>
                 <tr>
-                    <td><input colspan="2" type="submit" name="dangnhap" value="Đăng Nhập"></td>
+                    <td colspan="2"><input type="submit" name="dangnhap" value="Đăng Nhập"></td>
                 </tr>
             </table>
             </form>
             
         </div>
         <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
+
     </body>
 </html>

@@ -1,24 +1,33 @@
-<!DOCTYPE html>
 <html>
-    <title>Solitude</title>
-    <head> 
+    <head>
     <?php
     include 'connect\config.php';
-
     if(isset($_GET['timkiem']))
     {
         $tukhoa=$_GET['texttimkiem'];
-       
+        $sql_timkiem="SELECT * FROM sanpham  WHERE TenMon LIKE '%".$tukhoa."%'";
+        $query_timkiem=mysqli_query($conn,$sql_timkiem);
+      
+    }else
+    {
+        $tukhoa='';
+        $sql_timkiem="SELECT * FROM sanpham  ORDER BY id_MonAn DESC limit 3";
+        $query_timkiem=mysqli_query($conn,$sql_timkiem);
     }
-    $sql_timkiem="SELECT * FROM sanpham  WHERE TenMon LIKE '%".$tukhoa."%'";
-    $query_timkiem=mysqli_query($conn,$sql_timkiem);
     ?>
-    <link rel="stylesheet" type="text/css" href="style.css"> 
+    <link rel="stylesheet" type="text/css" href="menustyle.css"> 
     <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&display=swap" rel="stylesheet">
+    <?php
+    ?>
+    <style>
+  
+    </style>
+    <title>MeNu</title>
     </head>
     <body style="background-color:#FFE4E1;">
+    <div class="main">
     <div class="menu">
         <div class="MenuItem"> 
               
@@ -28,26 +37,42 @@
             <nav>
                     <a href="index.php">Trang Chủ</a>
                     <a href="menu.php">Menu</a>
-                    <a>Liên Hệ</a>
-                    <a>Tin Tức</a>
+                    <a href="lienhe.php">Liên Hệ</a>
+                    <a href="tintuc.php">Tin Tức</a>
                     <div class="HoatAnh start-home"></div>
             </nav>    
-       
+
         </div>
     </div>
-        <div class="body">
-        <?php 
-                while($row = mysqli_fetch_array($query_timkiem))
-                {
-                    ?>
-                        <?php echo $row['TenMon'] ?>
-                        <img src="ThemHinh/<?php echo $row['HinhAnh'] ?>"style="width:310px;height:200px; padding-top: 4px; padding-left:4px;">
-                <?php
-                }
-                ?>
-        </div>
-        <div class="clear"></div>
-        <div class="footer">
+    <div class="body">
+    <div class="product"> 
+                        <?php 
+                        while($row = mysqli_fetch_array($query_timkiem))
+                        {
+                            ?>
+
+                        <div class="card">
+                            <div class="thumb"> 
+                                <img  src="ThemHinh/<?php echo $row['HinhAnh'] ?>">
+                            </div>
+                                <div class="desc">
+                                    <h3>Thông Tin Món Ăn</h3>
+                                    <div class="name"><p class="Ten_sp">Tên Món Ăn:<?php echo $row['TenMon'] ?></p>
+                                    <p class="Mo_ta">Mô Tả:<?php echo $row['MoTa'] ?></p></div>
+                                    <div class="other-info">
+                                        <span class="Gia"><?php echo number_format($row['Gia'],0,',','.').' vnđ' ?></span>
+                                       
+                                    </div>
+                                </div>
+                        </div>           
+                        <?php
+                        }
+                        ?>   
+                        <a href="menu.php" ><button class="quaylai">Quay lại</button></a>
+            </div>         
+    </div>
+    <div class="clear"></div>
+    <div class="footer">
            <div class="container">
             <div class="row">
                 <div class="row-col">
@@ -55,6 +80,8 @@
                     <ul>
                         <li>
                         <div class="logof"><img src="image/320577066_568785604679266_5437479403153405636_n.png" style="width:100px"></div>
+                        <li> <h6>Công Ty TNHH 1TV SOLITUDE MOCHI</p></li>
+                        <li><h6>COPYRIGHT COPYRIGHT © 2023 SOLITUDE MOCHI</h6></li>
                         </li>
                     </ul>
                 </div>
@@ -84,20 +111,11 @@
                         </li>
                     </ul>
                 </div>
-                <div class="row-col">
-                    <ul>
-                        <li> <h6>Công Ty TNHH 1TV SOLITUDE MOCHI</p></li>
-                        <li><h6>COPYRIGHT COPYRIGHT © 2023 SOLITUDE MOCHI</h6></li>
-                        <a href="#"></a>
-                        </li>
-                    </ul>
-                </div>
             </div>
-           </div>
-
-        </div>
-        <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
-<script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+            </div>
+    </div>
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+<script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>     
     </body>
    
 </html>

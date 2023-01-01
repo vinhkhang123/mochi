@@ -1,9 +1,17 @@
+<?php
+if(isset($_GET['action'])=='dangxuat')
+{
+    unset($_SESSION['dangnhap']);
+    header('location:dangnhap.php');
+}
+?>
 <html>
     <head>
     <?php
     include 'C:\xampp\htdocs\baitap\connect\config.php';
     $sql_sp="SELECT * FROM sanpham ";
     $query_sp=mysqli_query($conn,$sql_sp);
+        
     ?>
     <link rel="stylesheet" type="text/css" href="style.css"> 
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -26,8 +34,8 @@
                 <nav>
                         <a href="index.php">Trang Chủ</a>
                         <a href="menu.php">Menu</a>
-                        <a>Liên Hệ</a>
-                        <a>Đăng Nhập</a>
+                        <a href="tintuc.php">Tin Tức</a>
+                        <a href="lietke.php?action=dangxuat">Đăng Xuất</a>
                         <div class="HoatAnh start-home"></div>
                 </nav>    
         
@@ -82,6 +90,7 @@
                     <p>Địa chỉ: 390 Hoàng Văn Thụ, Phường 4,Tân Bình,TP.Hồ Chí Minh</p>
         </div>
     </div>
+    
     </body>
    
 </html>

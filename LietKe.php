@@ -33,7 +33,7 @@ if(isset($_GET['action'])=='dangxuat')
                 <nav>
                         <a href="index.php">Trang Chủ</a>
                         <a href="menu.php">Menu</a>
-                        <a>Liên Hệ</a>
+                        <a href="lienhe.php">Liên Hệ</a>
                         <a href="lietke.php?action=dangxuat">Đăng Xuất</a>
                         <div class="HoatAnh start-home"></div>
                 </nav>    
@@ -68,7 +68,7 @@ if(isset($_GET['action'])=='dangxuat')
  
                         <td>
                             <a href="Sua.php?idmonan=<?php echo $row['id_MonAn']?>">Sửa</a>
-                            <a href="XuLy.php?idmonan=<?php echo $row['id_MonAn']?>">Xóa</a>
+                            <a onclick="return Del('<?php echo $row['TenMon'];?>')" href="XuLy.php?idmonan=<?php echo $row['id_MonAn']?>">Xóa</a>
                         </td>
                     </tr>
                     <?php
@@ -86,6 +86,11 @@ if(isset($_GET['action'])=='dangxuat')
         </div>
         <div class="clear"></div>
     </div>
+    <script>
+ function Del(name){
+    return confirm("bạn có chắc muốn xóa món ăn:" + name+"?");
+ }    
+</script>
     </body>
    
 </html>
