@@ -12,7 +12,6 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-left: 110px;
     width:auto;
     height: auto;
 }
@@ -28,7 +27,7 @@ body {
     left: 0;
     right: 0;
     align-items: center;
-    z-index: 99;
+    z-index: 2;
 }
 .MenuItem
 {
@@ -114,6 +113,7 @@ a:nth-child(4)
     width: 100%;
     margin: 0%;
     margin-top: 60px;
+    margin-left: 130px;
 }
 .maincontent
 {
@@ -138,7 +138,8 @@ a:nth-child(4)
 {
     max-width: 1170px;
     margin: auto; 
-    
+    justify-content:space-between;
+    padding-left: 100px;
 }
 .row
 {
@@ -147,9 +148,9 @@ a:nth-child(4)
 }
 .row-col
 {
-    width: 50%;
-    padding-left: 0;
-    padding-right: 0;
+    width: auto;
+    padding-left: 60px;
+    padding-right: 0px;
     float: left;
 }
 .row-col h4{
@@ -160,6 +161,14 @@ a:nth-child(4)
 }
 .row-col ul{
     list-style: none;
+}
+.row-col a{
+    text-decoration: none;
+    color: azure;
+}
+.row-col h6{
+    align-items: center;
+    font-size: 9px;
 }
 .clear
 {
@@ -260,4 +269,39 @@ a{
     background:#070707;
     margin-left: 100px;
     border-radius: 10px;
+}
+.seacrch-box{
+    position:absolute;
+    top:15%;
+    right: 0%;
+    transform: translate(-20%,-50%);
+    background:black;
+    border-radius: 11px;
+    padding: 5px;
+    background: linear-gradient(to right,rgb(244, 197, 238),#e28bb2);     
+    width: 220px;
+    align-items: center;
+    text-align: center;
+}
+
+.search-txt{
+    border: none;
+    background: none;
+    outline: none;
+    float: left;
+    padding: 0;
+    color: white;
+    font-size: 16px;
+    transition: 1s;
+    line-height: 20px;
+    width: 140px;
+}
+.search-btn
+{
+    justify-content:center;
+    align-items: center;
+    float: right;
+    background: linear-gradient(to right,rgb(244, 197, 238),#e28bb2);     
+    border-radius: 15px;
+    border: 1px solid;
 }

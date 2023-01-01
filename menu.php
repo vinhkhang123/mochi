@@ -31,10 +31,16 @@
                     <a>Tin Tức</a>
                     <div class="HoatAnh start-home"></div>
             </nav>    
-       
+
         </div>
     </div>
     <div class="body">
+    <div class="seacrch-box">
+        <form action="timkiem.php" method="GET">
+             <input class="search-txt" type="text" name="texttimkiem"  placeholder="Nhập từ khóa">
+             <input type="submit" class="search-btn" name="timkiem" value="Tìm Kiếm"> 
+        </form>
+    </div>
     <div class="product"> 
                         <?php 
                         while($row_sp = mysqli_fetch_array($query_sp))
@@ -69,26 +75,42 @@
                     <ul>
                         <li>
                         <div class="logof"><img src="image/320577066_568785604679266_5437479403153405636_n.png" style="width:100px"></div>
-                        </li>
+                        <li> <h6>Công Ty TNHH 1TV SOLITUDE MOCHI</p></li>
                         <li><h6>COPYRIGHT COPYRIGHT © 2023 SOLITUDE MOCHI</h6></li>
+                        </li>
+                    </ul>
+                </div>
+                <div class="row-col">
+                    <ul>
+                        <a href="#"></a>
+                        </li>
                     </ul>
                 </div>
                 <div class="row-col">
                     <h4>Liên Hệ</h4>
                     <ul>
-                        <li> <p>Công Ty TNHH 1TV SOLITUDE MOCHI</p></li>
                         <li><p>Địa chỉ: 390 Hoàng Văn Thụ, Phường 4,Tân Bình,TP.Hồ Chí Minh</p></li>
                         <li>  <p>SĐT:0981814415</p> </li>
+                        <li><p>Gmail:vinhkhang050104@gmail.com</p></li>
                         <a href="#"></a>
                         </li>
                     </ul>
                 </div>
-               
+                <div class="row-col">
+                    <h4>Mạng Xã Hội </h4>
+                    <ul>
+                        <li> <a href="https://www.facebook.com/banhmi0501"><ion-icon name="logo-facebook"></ion-icon></a></li>
+                        <li> <a href="https://www.youtube.com"><ion-icon name="logo-youtube"></ion-icon></a></li>
+                        <li>  <a href="https://www.instagram.com/banh_mieii/"><ion-icon name="logo-instagram"></ion-icon></p> </li>
+                        <a href="#"></a>
+                        </li>
+                    </ul>
+                </div>
             </div>
-           </div>
-
-        </div>
+            </div>
     </div>
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+<script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>     
     </body>
    
 </html>
