@@ -1,3 +1,4 @@
+<?php session_start(); error_reporting(0);?>
 <?php
 include 'connect\config.php';
 $MaMonAn= $_POST['MaMonAn'];
@@ -9,15 +10,21 @@ $Gia=$_POST['Gia'];
 $SoLuong=$_POST['SoLuong'];
 $MoTa=$_POST['MoTa'];
 $id_MonAn=$_GET['idmonan'];
-
 if(isset($_POST['themMon']))
 {
+if (empty($MaMonAn) ||empty($HinhAnh) ||empty($HinhAnh_time) || empty($TenMon) || empty($Gia) ||empty($SoLuong ||empty($MoTa))) {
+    header('Location:http://localhost/baitap/them.php');
+
+    return false;
+    echo '<script> alert("vui lòng nhập lại");</script>';
+}else
+
     $sql_them="INSERT INTO sanpham(MaMonAn,HinhAnh,TenMon,Gia,SoLuong,MoTa) VALUE ('".$MaMonAn."','".$HinhAnh_time."','".$TenMon."','".$Gia."','".$SoLuong."','".$MoTa."')";
 mysqli_query($conn,$sql_them);
 move_uploaded_file($HinhAnh_tmp,'ThemHinh/'.$HinhAnh_time);
 header('Location:http://localhost/baitap/lietke.php');
 
-}elseif(isset($_POST['suasanpham']))
+}if(isset($_POST['suasanpham']))
 {
     if($_FILES['$HinhAnh']){
         move_uploaded_file($HinhAnh_tmp,'ThemHinh/'.$HinhAnh_time);

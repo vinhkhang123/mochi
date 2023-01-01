@@ -13,6 +13,7 @@ if(isset($_GET['action'])=='dangxuat')
     $query_sp=mysqli_query($conn,$sql_sp);
         
     ?>
+    <script src="java.js"></script>
     <link rel="stylesheet" type="text/css" href="style.css"> 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -45,10 +46,10 @@ if(isset($_GET['action'])=='dangxuat')
         <h1 id="ha">Thêm Món</h1>
             <div class="bang">
                 <table style="witdth:100%" border="1" text-align:center>
-            <form method="POST" action="XuLy.php" enctype="multipart/form-data">
+            <form id="themne" method="POST" action="xuly.php" enctype="multipart/form-data">
             <tr>    
                         <td>Mã Món:</td>
-                        <td><input type="text" name="MaMonAn"></td>
+                        <td><input type="text" name="MaMonAn" id="MaMonAn" minlength="1"></td>
                     </tr>
                     <tr>    
                         <td>Hình Ảnh:</td>
@@ -71,7 +72,7 @@ if(isset($_GET['action'])=='dangxuat')
                         <td><textarea rows="10" name="MoTa" style="resize:none"></textarea></td>
                     </tr>
                     <tr>
-                        <td colspan="2"><input type="submit" name="themMon" value="Thêm Món"></td>
+                        <td colspan="2"><input onclick="them()"type="submit" name="themMon" value="Thêm Món"></td>
                     </tr>
             </form>
                     
@@ -90,7 +91,8 @@ if(isset($_GET['action'])=='dangxuat')
                     <p>Địa chỉ: 390 Hoàng Văn Thụ, Phường 4,Tân Bình,TP.Hồ Chí Minh</p>
         </div>
     </div>
-    
+    <script>
+    </script>
     </body>
    
 </html>
