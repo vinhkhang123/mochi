@@ -10,7 +10,7 @@ if(isset($_GET['action'])=='dangxuat')
     <?php
     include 'C:\xampp\htdocs\baitap\connect\config.php';
     $sql_lietke_sp="SELECT * FROM sanpham ";
-    $query_lietke_sp=mysqli_query($conn,$sql_lietke_sp)
+    $query_lietke_sp=mysqli_query($conn,$sql_lietke_sp);
     ?>
     <link rel="stylesheet" type="text/css" href="style.css"> 
     <link rel="preconnect" href="https://fonts.googleapis.com">

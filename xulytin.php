@@ -34,7 +34,7 @@ header('Location:http://localhost/baitap/lietketin.php');
     }
     else{
         if (empty($tenbaiviet) || empty($tomtat) || empty($noidung) ) {
-                   header('Location:http://localhost/baitap/lietke.php');
+                   header('Location:http://localhost/baitap/lietketin.php');
         
             return false;
             echo '<script> alert("vui lòng nhập lại");</script>';
@@ -42,7 +42,7 @@ header('Location:http://localhost/baitap/lietketin.php');
         $sql_update ="UPDATE tintuc SET tenbaiviet='".$tenbaiviet."',tomtat='".$tomtat."',noidung='".$noidung."' WHERE id='$_GET[id]'";
     }
     mysqli_query($conn,$sql_update);
-    header('Location:http://localhost/baitap/lietke.php');
+    header('Location:http://localhost/baitap/lietketin.php');
 }else{
     $id=$_GET['id'];
     $sql="SELECT * FROM tintuc WHERE id='$id' LIMIT 1";

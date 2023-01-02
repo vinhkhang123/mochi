@@ -10,7 +10,7 @@ if(isset($_GET['action'])=='dangxuat')
     <?php
     include 'C:\xampp\htdocs\baitap\connect\config.php';
     $sql_lietke_tin="SELECT * FROM tintuc ";
-    $query_lietke_tin=mysqli_query($conn,$sql_lietke_tin)
+    $query_lietke_tin=mysqli_query($conn,$sql_lietke_tin);
     ?>
         <script src="java.js"></script>
 

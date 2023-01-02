@@ -208,6 +208,36 @@ display: flex;
 {
     text-decoration: none;
 }
+
+.khungtin{
+    min-width: 400px;
+    max-width: auto;
+    display:flex;
+    margin-left: 18%;
+    width: 1000px;
+    justify-content:center;
+    align-items: center;
+    text-align: center;
+    flex-wrap: wrap;
+    margin-top: 10%;
+    margin-bottom: 10%;
+}
+.khungtin  img{
+    text-decoration: none;
+    border: solid 1px;
+}
+.khungtin a
+{
+    text-decoration: none;
+    width: auto;
+    color: #070707;
+    border: solid 1px;
+    margin: 5px;
+}
+.khungtin p
+{
+    text-decoration: none;
+}
 .GioiThieuP 
 {
     right: 10px;
