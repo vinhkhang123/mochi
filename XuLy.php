@@ -27,7 +27,7 @@ header('Location:http://localhost/baitap/lietke.php');
 }if(isset($_POST['suasanpham']))
 {
     
-    if($_FILES['$HinhAnh']){
+    if($HinhAnh!=''){
         move_uploaded_file($HinhAnh_tmp,'ThemHinh/'.$HinhAnh_time);
     $sql_update ="UPDATE sanpham SET MaMonAn='".$MaMonAn."',HinhAnh='".$HinhAnh_time."',TenMon='".$TenMon."',Gia='".$Gia."',SoLuong='".$SoLuong."',MoTa='".$MoTa."' WHERE id_MonAn='$_GET[idmonan]'";
     $sql="SELECT * FROM sanpham WHERE id_MonAn='$_GET[idmonan]'LIMIT 1";
@@ -39,7 +39,7 @@ header('Location:http://localhost/baitap/lietke.php');
     }
     else{
         if (empty($MaMonAn) || empty($TenMon) || empty($Gia) ||empty($SoLuong) ||empty($MoTa)) {
-            header('Location:http://localhost/baitap/lietke.php');
+                   header('Location:http://localhost/baitap/lietke.php');
         
             return false;
             echo '<script> alert("vui lòng nhập lại");</script>';

@@ -23,7 +23,7 @@ header('Location:http://localhost/baitap/lietketin.php');
 }if(isset($_POST['suatintuc']))
 {
     
-    if($_FILES['$HinhAnh']){
+    if($HinhAnh!=''){
         move_uploaded_file($HinhAnh_tmp,'ThemHinh/'.$HinhAnh_time);
     $sql_update ="UPDATE tintuc SET id='".$id."',HinhAnh='".$HinhAnh_time."',tenbaivet='".$tenbaiviet."',tomtat='".$tomtat."',noidung='".$noidung."' WHERE id='$_GET[id]'";
     $sql="SELECT * FROM tintuc WHERE id='$_GET[id]'LIMIT 1";
@@ -41,8 +41,21 @@ header('Location:http://localhost/baitap/lietketin.php');
             echo '<script> alert("vui lòng nhập lại");</script>';
         }else
         $sql_update ="UPDATE tintuc SET tenbaiviet='".$tenbaiviet."',tomtat='".$tomtat."',noidung='".$noidung."' WHERE id='$_GET[id]'";
+        header('Location:http://localhost/baitap/lietketin.php');
+
     }
     mysqli_query($conn,$sql_update);
     header('Location:http://localhost/baitap/lietketin.php');
+}else{
+    $id=$_GET['id'];
+    $sql="SELECT * FROM tintuc WHERE id='$id' LIMIT 1";
+    $query=mysqli_query($conn,$sql);
+    while($row = mysqli_fetch_array($query))
+    {
+        unlink('ThemHinh/'.$row['HinhAnh']);
+    }
+    $sql_xoa="DELETE  FROM tintuc WHERE id='$id'";
+    mysqli_query($conn,$sql_xoa);
+    header('Location:http://localhost/baitap/lietke.php');
 }
 ?>

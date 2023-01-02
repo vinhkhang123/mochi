@@ -73,7 +73,7 @@ if(isset($_GET['action'])=='dangxuat')
  
                         <td>
                             <a href="suatin.php?id=<?php echo $row['id']?>">Sửa</a>
-                            <a onclick="return Del('<?php echo $row['tenbaiviet'];?>')" href="XuLy.php?idmonan=<?php echo $row['id']?>">Xóa</a>
+                            <a onclick="return Del('<?php echo $row['tenbaiviet'];?>')" href="XuLytin.php?id=<?php echo $row['id']?>">Xóa</a>
                         </td>
                     </tr>
                     <?php
