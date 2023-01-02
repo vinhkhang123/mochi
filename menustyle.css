@@ -319,3 +319,29 @@ a{
     position: fixed;
     cursor: pointer;
 }
+.khungtincon{
+    min-width: 400px;
+    max-width: auto;
+    display:flex;
+    justify-content:center;
+    align-items: center;
+    text-align: center;
+    flex-wrap: wrap;
+        margin-bottom: 10%;
+}
+.khungtincon  img{
+    text-decoration: none;
+    border: solid 1px;
+}
+.khungtincon a
+{
+    text-decoration: none;
+    width: 1000px;
+    color: #070707;
+    border: solid 1px;
+    margin: 5px;
+}
+.khungtincon p
+{
+    text-decoration: none;
+}

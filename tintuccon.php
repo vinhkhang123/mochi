@@ -1,19 +1,23 @@
-
-<!DOCTYPE html>
 <html>
-    <title>Solitude</title>
-    <head> 
+    <head>
     <?php
-    include 'connect\config.php';
-    $sql_ds="SELECT * FROM tintuc ORDER BY id DESC ";
-    $query_ds=mysqli_query($conn,$sql_ds);
+     include 'connect\config.php';
+     $sql_tin="SELECT * FROM tintuc WHERE  tintuc.id='$_GET[id]' limit 1";
+     $query_tin=mysqli_query($conn,$sql_tin);
     ?>
-    <link rel="stylesheet" type="text/css" href="style.css"> 
+    <link rel="stylesheet" type="text/css" href="menustyle.css"> 
     <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&display=swap" rel="stylesheet">
+    <?php
+    ?>
+    <style>
+  
+    </style>
+    <title>MeNu</title>
     </head>
     <body style="background-color:#FFE4E1;">
+    <div class="main">
     <div class="menu">
         <div class="MenuItem"> 
               
@@ -27,30 +31,28 @@
                     <a href="tintuc.php">Tin Tức</a>
                     <div class="HoatAnh start-home"></div>
             </nav>    
-       
+
         </div>
     </div>
-        <div class="body">
-          <div class="khungtin">
-          <?php 
-                while($row_ds = mysqli_fetch_array($query_ds))
+    <div class="body">
+        <div class="khungtincon">
+               <?php 
+                while($row_ds = mysqli_fetch_array($query_tin))
                 {
                     ?>
-                    <a href="tintuccon.php?id=<?php echo $row_ds['id']?>">
-                        <img src="ThemHinh/<?php echo $row_ds['HinhAnh'] ?>"style="width:310px;height:200px; padding-top: 4px; padding-left:4px;">
+                    <a href="tintuc.php?id=<?php echo $row_ds['id']?>">
+                        <img src="ThemHinh/<?php echo $row_ds['HinhAnh'] ?>"style="width:600px;height:600px;">
                         <p>tên bài:<?php echo $row_ds['tenbaiviet']?></p>  
                         <p>tóm tắt:<?php echo $row_ds['tomtat']?></p>  
-
+                        <p style="margin:10px">Nội dung:<?php echo $row_ds['noidung']?></p>  
                     </a>
                 <?php
                 }
                 ?>
-          </div>
-        
-        
-        </div>
-        <div class="clear"></div>
-        <div class="footer">
+        </div>        
+    </div>
+    <div class="clear"></div>
+    <div class="footer">
            <div class="container">
             <div class="row">
                 <div class="row-col">
@@ -58,6 +60,8 @@
                     <ul>
                         <li>
                         <div class="logof"><img src="image/320577066_568785604679266_5437479403153405636_n.png" style="width:100px"></div>
+                        <li> <h6>Công Ty TNHH 1TV SOLITUDE MOCHI</p></li>
+                        <li><h6>COPYRIGHT COPYRIGHT © 2023 SOLITUDE MOCHI</h6></li>
                         </li>
                     </ul>
                 </div>
@@ -87,20 +91,11 @@
                         </li>
                     </ul>
                 </div>
-                <div class="row-col">
-                    <ul>
-                        <li> <h6>Công Ty TNHH 1TV SOLITUDE MOCHI</p></li>
-                        <li><h6>COPYRIGHT COPYRIGHT © 2023 SOLITUDE MOCHI</h6></li>
-                        <a href="#"></a>
-                        </li>
-                    </ul>
-                </div>
             </div>
-           </div>
-
-        </div>
-        <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
-<script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+            </div>
+    </div>
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+<script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>     
     </body>
    
 </html>
