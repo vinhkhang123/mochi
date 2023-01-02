@@ -49,9 +49,10 @@ if(isset($_GET['action'])=='dangxuat')
             <button type="button" onclick="location.href='themtin.php';" class="csw-btn-buttonThem" >Thêm tin</button>
             </div>
             <div class="bang">
-                <table style="witdth:100%" border="1" text-align:center>
-                 <form method="POST" action="XuLy.php" enctype="multipart/form-data">
+                <table style="witdth:1000px; word-wrap:break-word;" border="1" text-align:center 	 >
+                 <form method="POST" action="XuLytin.php" enctype="multipart/form-data">
                     <tr>
+                        <th>id</th>
                         <th>Tên Tin</th>
                         <th>Hình Ảnh</th>
                         <th>Tóm Tắt</th>

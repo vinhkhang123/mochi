@@ -78,7 +78,7 @@ if(isset($_GET['action'])=='dangxuat')
                     </table>
             </div>
             <div class="but">
-            <button type="button" onclick="location.href='lietketin .php';" class="csw-btn-buttonXoa" >quản lý</button>
+            <button type="button" onclick="location.href='lietketin.php';" class="csw-btn-buttonXoa" >quản lý</button>
             </div>
             <br>
         </div>
