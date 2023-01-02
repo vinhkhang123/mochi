@@ -12,6 +12,7 @@ if(isset($_GET['action'])=='dangxuat')
     $sql_Sua_sp="SELECT * FROM sanpham WHERE id_MonAn='$_GET[idmonan]' LIMIT 1 ";
     $query_Sua_sp=mysqli_query($conn,$sql_Sua_sp);
     ?>
+    <script src="java.js"></script>
     <link rel="stylesheet" type="text/css" href="style.css"> 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -33,7 +34,7 @@ if(isset($_GET['action'])=='dangxuat')
                 <nav>
                         <a href="index.php">Trang Chủ</a>
                         <a href="menu.php">Menu</a>
-                    <a href="tintuc.php">Tin Tức</a>
+                    <a href="tintuc/tintuc.php">Tin Tức</a>
                         <a href="lietke.php?action=dangxuat">Đăng Xuất</a>
                         <div class="HoatAnh start-home"></div>
                 </nav>    

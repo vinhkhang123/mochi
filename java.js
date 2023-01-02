@@ -47,10 +47,6 @@ function sua()
     {
         alert("vui lòng nhập mã món");
         return false;
-    }else if(hinhanh=="")
-    {
-        alert("vui lòng nhập hình ảnh");
-        return;
     }else if(tenmon=="")
     {
         alert("vui lòng nhập tên món");

@@ -35,7 +35,7 @@ if(isset($_GET['action'])=='dangxuat')
                 <nav>
                         <a href="index.php">Trang Chủ</a>
                         <a href="menu.php">Menu</a>
-                        <a href="tintuc.php">Tin Tức</a>
+                        <a href="tintuc/tintuc.php">Tin Tức</a>
                         <a href="lietke.php?action=dangxuat">Đăng Xuất</a>
                         <div class="HoatAnh start-home"></div>
                 </nav>    
