@@ -9,9 +9,11 @@ if(isset($_GET['action'])=='dangxuat')
     <head>
     <?php
     include 'C:\xampp\htdocs\baitap\connect\config.php';
-    $sql_lietke_sp="SELECT * FROM sanpham ";
-    $query_lietke_sp=mysqli_query($conn,$sql_lietke_sp)
+    $sql_lietke_tin="SELECT * FROM tintuc ";
+    $query_lietke_tin=mysqli_query($conn,$sql_lietke_tin)
     ?>
+        <script src="java.js"></script>
+
     <link rel="stylesheet" type="text/css" href="style.css"> 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -20,7 +22,7 @@ if(isset($_GET['action'])=='dangxuat')
     ?>
     <style>
     </style>
-    <title>Quản Lý</title>
+    <title>Quản Lý tin</title>
     </head>
     <body style=" background-color:#FFE4E1;">
     <div class="body">
@@ -43,36 +45,35 @@ if(isset($_GET['action'])=='dangxuat')
         <div id="main">
         <h1 id="ha">Sản Phẩm</h1>
         <div class="but">
-            <button type="button" onclick="location.href='them.php';" class="csw-btn-buttonThem" >Thêm</button>
-            <button type="button" onclick="location.href='lietketin.php';" class="csw-btn-buttonThem" >Quản lý tin</button>
+            <button type="button" onclick="location.href='lietke.php';" class="csw-btn-buttonquanlymon" >Quản lý món ăn</button>
+            <button type="button" onclick="location.href='themtin.php';" class="csw-btn-buttonThem" >Thêm tin</button>
             </div>
             <div class="bang">
                 <table style="witdth:100%" border="1" text-align:center>
                  <form method="POST" action="XuLy.php" enctype="multipart/form-data">
                     <tr>
-                        <th>Mã Món</th>
-                        <th>Tên Món</th>
+                        <th>Tên Tin</th>
                         <th>Hình Ảnh</th>
-                        <th>Giá</th>
-                        <th>Mô Tả</th>
+                        <th>Tóm Tắt</th>
+                        <th>nội dung</th>
                         <th>Quản Lý </th>
                     </tr>
                     <?php
                     $i=0;
-                    while($row=mysqli_fetch_array($query_lietke_sp))
+                    while($row=mysqli_fetch_array($query_lietke_tin))
                     {
                         $i++;
                     ?>
                     <tr>
                         <td><?php echo $i ?></td>
-                        <td><?php echo $row['TenMon'] ?></td>
+                        <td><?php echo $row['tenbaiviet'] ?></td>
                         <td><img src="ThemHinh/<?php echo $row['HinhAnh'] ?>"width="150px"></td>
-                        <td><?php echo $row['Gia'] ?></td>
-                        <td><?php echo $row['MoTa'] ?></td>
+                        <td><?php echo $row['tomtat'] ?></td>
+                        <td><?php echo $row['noidung'] ?></td>
  
                         <td>
-                            <a href="Sua.php?idmonan=<?php echo $row['id_MonAn']?>">Sửa</a>
-                            <a onclick="return Del('<?php echo $row['TenMon'];?>')" href="XuLy.php?idmonan=<?php echo $row['id_MonAn']?>">Xóa</a>
+                            <a href="suatin.php?id=<?php echo $row['id']?>">Sửa</a>
+                            <a onclick="return Del('<?php echo $row['tenbaiviet'];?>')" href="XuLy.php?idmonan=<?php echo $row['id']?>">Xóa</a>
                         </td>
                     </tr>
                     <?php
@@ -81,6 +82,8 @@ if(isset($_GET['action'])=='dangxuat')
                  </form>
                 </table>
             </div>
+
+
             <br>
         </div>
         </div>

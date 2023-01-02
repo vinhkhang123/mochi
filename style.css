@@ -255,11 +255,27 @@ display: flex;
     background: #FFF0F5	;
     border: 1px solid #FFF0F5;
     transition: 0.4s;
+    top: 10%;
   }
   .csw-btn-buttonSua:hover {
     background: #292929;
     color: azure!important;
   }
+  .csw-btn-buttonquanlymon {
+    margin-top: 10px;
+    cursor: pointer;
+    font-size: 20px;
+    padding: 10px 35px;
+    color: #080505 !important;
+    border-radius: 10px;
+    background: #FFF0F5	;
+    border: 1px solid #FFF0F5;
+    transition: 0.4s;
+  }
+.csw-btn-buttonquanlymon:hover {
+    background: #292929;
+    color: azure!important;
+}
   .csw-btn-buttonThem {
     margin-top: 10px;
     cursor: pointer;
@@ -375,3 +391,18 @@ display: flex;
     from {opacity: 0;}
     to {opacity:1 ;}
   }
+
+.quanlymon
+{
+    justify-content:center;
+    align-items: center;
+    float: right;
+    background: linear-gradient(to right,rgb(244, 197, 238),#e28bb2);     
+    border-radius: 50px;
+    border: 1px solid;
+    bottom: 25%;
+    right: 5%;
+    height: 60px;
+    position: fixed;
+    cursor: pointer;
+}

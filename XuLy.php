@@ -12,7 +12,7 @@ $MoTa=$_POST['MoTa'];
 $id_MonAn=$_GET['idmonan'];
 if(isset($_POST['themMon']))
 {
-if (empty($MaMonAn) ||empty($HinhAnh) ||empty($HinhAnh_time) || empty($TenMon) || empty($Gia) ||empty($SoLuong ||empty($MoTa))) {
+if (empty($MaMonAn) ||empty($HinhAnh) ||empty($HinhAnh_time) || empty($TenMon) || empty($Gia) ||empty($SoLuong) ||empty($MoTa)) {
     header('Location:http://localhost/baitap/them.php');
 
     return false;
@@ -38,7 +38,7 @@ header('Location:http://localhost/baitap/lietke.php');
     }
     }
     else{
-        if (empty($MaMonAn) || empty($TenMon) || empty($Gia) ||empty($SoLuong ||empty($MoTa))) {
+        if (empty($MaMonAn) || empty($TenMon) || empty($Gia) ||empty($SoLuong) ||empty($MoTa)) {
             header('Location:http://localhost/baitap/lietke.php');
         
             return false;

@@ -9,8 +9,8 @@ if(isset($_GET['action'])=='dangxuat')
     <head>
     <?php
     include 'C:\xampp\htdocs\baitap\connect\config.php';
-    $sql_Sua_sp="SELECT * FROM sanpham WHERE id_MonAn='$_GET[idmonan]' LIMIT 1 ";
-    $query_Sua_sp=mysqli_query($conn,$sql_Sua_sp);
+    $sql_Sua_tin="SELECT * FROM tintuc WHERE id='$_GET[id]' LIMIT 1 ";
+    $query_Sua_tin=mysqli_query($conn,$sql_Sua_tin);
     ?>
     <script src="java.js"></script>
     <link rel="stylesheet" type="text/css" href="style.css"> 
@@ -46,36 +46,28 @@ if(isset($_GET['action'])=='dangxuat')
             <div class="bang">
                 <table style="witdth:100%" border="1" text-align:center>
                 <?php
-                while($row=mysqli_fetch_array($query_Sua_sp))
+                while($row=mysqli_fetch_array($query_Sua_tin))
                 {
                 ?>
-            <form method="POST" action="XuLy.php?idmonan=<?php echo $row['id_MonAn'] ?>" enctype="multipart/form-data">
+            <form method="POST" action="xulytin.php?id=<?php echo $row['id'] ?>" enctype="multipart/form-data">
             <tr>    
-                        <td>Mã Món:</td>
-                        <td><input type="text" value="<?php echo $row['MaMonAn'] ?>" name="MaMonAn"></td>
+                        <td>Tên bài:</td>
+                        <td><input type="text" value="<?php echo $row['tenbaiviet'] ?>" name="tenbaiviet"></td>
                     </tr>
                     <tr>    
                         <td>Hình Ảnh:</td>
                         <td><input type="file" name="HinhAnh"><img src="ThemHinh/<?php echo $row['HinhAnh'] ?>"width="150px"></td>
                     </tr>
                     <tr>    
-                        <td>Tên Món:</td>
-                        <td><input type="text" value="<?php echo $row['TenMon'] ?>" name="TenMon"></td>
+                        <td>Tóm Tắt:</td>
+                        <td><input type="text" value="<?php echo $row['tomtat'] ?>" name="tomtat"></td>
                     </tr>
                     <tr>    
-                        <td>Giá:</td>
-                        <td><input type="text" value="<?php echo $row['Gia'] ?>" name="Gia"></td>
-                    </tr>
-                    <tr>    
-                        <td>Số Lượng:</td>
-                        <td><input type="text" value="<?php echo $row['SoLuong'] ?>" name="SoLuong"></td>
-                    </tr>
-                    <tr>    
-                        <td>Mô tả:</td>
-                        <td><textarea rows="10" name="MoTa" style="resize:none"><?php echo $row['MoTa'] ?></textarea></td>
+                        <td>Nội Dung:</td>
+                        <td><textarea rows="10" name="noidung" style="resize:none"><?php echo $row['noidung'] ?></textarea></td>
                     </tr>
                     <tr>
-                        <td colspan="2"><input onclick="sua()" type="submit" name="suasanpham" value="Sửa"></td>
+                        <td colspan="2"><input onclick="sua()" type="submit" name="suatintuc" value="Sửa"></td>
                     </tr>
                     <?php
                     
@@ -86,7 +78,7 @@ if(isset($_GET['action'])=='dangxuat')
                     </table>
             </div>
             <div class="but">
-            <button type="button" onclick="location.href='lietke.php';" class="csw-btn-buttonXoa" >quản lý</button>
+            <button type="button" onclick="location.href='lietketin.php';" class="csw-btn-buttonXoa" >quản lý</button>
             </div>
             <br>
         </div>

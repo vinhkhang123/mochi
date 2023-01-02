@@ -35,7 +35,7 @@ if(isset($_GET['action'])=='dangxuat')
                 <nav>
                         <a href="index.php">Trang Chủ</a>
                         <a href="menu.php">Menu</a>
-                        <a href="tintuc/tintuc.php">Tin Tức</a>
+                        <a href="tintuc.php">Tin Tức</a>
                         <a href="lietke.php?action=dangxuat">Đăng Xuất</a>
                         <div class="HoatAnh start-home"></div>
                 </nav>    
@@ -79,18 +79,62 @@ if(isset($_GET['action'])=='dangxuat')
                     </table>
             </div>
             <div class="but">
-            <button type="button" onclick="location.href='sua.php';" class="csw-btn-buttonSua" >sửa</button>
-            <button type="button" onclick="location.href='xoa.php';" class="csw-btn-buttonXoa" >Xóa</button>
+            <button type="button" onclick="location.href='lietke.php';" class="csw-btn-buttonXoa" >quản lý</button>
             </div>
             <br>
         </div>
         </div>
         <div class="clear"></div>
         <div class="footer">
-                    <p>Công Ty TNHH 1TV SOLITUDE MOCHI</p>
-                    <p>Địa chỉ: 390 Hoàng Văn Thụ, Phường 4,Tân Bình,TP.Hồ Chí Minh</p>
-        </div>
+           <div class="container">
+            <div class="row">
+                <div class="row-col">
+                    <h4></h4>
+                    <ul>
+                        <li>
+                        <div class="logof"><img src="image/320577066_568785604679266_5437479403153405636_n.png" style="width:100px"></div>
+                        </li>
+                    </ul>
+                </div>
+                <div class="row-col">
+                    <ul>
+                        <a href="#"></a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="row-col">
+                    <h4>Liên Hệ</h4>
+                    <ul>
+                        <li><p>Địa chỉ: 390 Hoàng Văn Thụ, Phường 4,Tân Bình,TP.Hồ Chí Minh</p></li>
+                        <li>  <p>SĐT:0981814415</p> </li>
+                        <li><p>Gmail:vinhkhang050104@gmail.com</p></li>
+                        <a href="#"></a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="row-col">
+                    <h4>Mạng Xã Hội </h4>
+                    <ul>
+                        <li> <a href="https://www.facebook.com/banhmi0501"><ion-icon name="logo-facebook"></ion-icon></a></li>
+                        <li> <a href="https://www.youtube.com"><ion-icon name="logo-youtube"></ion-icon></a></li>
+                        <li>  <a href="https://www.instagram.com/banh_mieii/"><ion-icon name="logo-instagram"></ion-icon></p> </li>
+                        <a href="#"></a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="row-col">
+                    <ul>
+                        <li> <h6>Công Ty TNHH 1TV SOLITUDE MOCHI</p></li>
+                        <li><h6>COPYRIGHT COPYRIGHT © 2023 SOLITUDE MOCHI</h6></li>
+                        <a href="#"></a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+           </div>
     </div>
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+<script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
     <script>
     </script>
     </body>
