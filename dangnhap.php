@@ -30,6 +30,7 @@ if(isset($_POST['dangnhap']))
         echo 'alert("sai tài khoản hoặc mật khẩu")';
         echo '</script>';
     }
+    
 }
 ?>
 <!DOCTYPE <!DOCTYPE html>
@@ -44,6 +45,8 @@ if(isset($_POST['dangnhap']))
             background:#FFE4E1;
             align-items: center;
             text-align: center;
+            display:flex;
+            justify-content:center;
 
         }
         .wrapper{

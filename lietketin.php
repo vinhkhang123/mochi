@@ -1,4 +1,9 @@
 <?php
+session_start();
+if(!isset($_SESSION['dangnhap']))
+{
+    header('location:dangnhap.php');
+}else
 if(isset($_GET['action'])=='dangxuat')
 {
     unset($_SESSION['dangnhap']);
@@ -36,7 +41,7 @@ if(isset($_GET['action'])=='dangxuat')
                         <a href="index.php">Trang Chủ</a>
                         <a href="menu.php">Menu</a>
                         <a href="lienhe.php">Liên Hệ</a>
-                        <a href="lietke.php?action=dangxuat">Đăng Xuất</a>
+                        <a href="lietke.php?action=dangxuat">Đăng Xuất <?php if(isset($_SESSION['dangnhap'])){echo $_SESSION['dangnhap'];} ?></a>
                         <div class="HoatAnh start-home"></div>
                 </nav>    
         
