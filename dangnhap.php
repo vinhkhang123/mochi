@@ -42,11 +42,14 @@ if(isset($_POST['dangnhap']))
         <link href="css/style.css" rel="stylesheet">
         <style>
         body{
-            background:#FFE4E1;
+            background-image: url("image/pngtree-strawberry-daifuku-pink-dessert-ice-cold-summer-picture-image_1551761.jpg");
+            background-repeat:no-repeat;
+            background-size:cover;
             align-items: center;
             text-align: center;
             display:flex;
             justify-content:center;
+            width: 100%;
 
         }
         .wrapper{

@@ -29,7 +29,9 @@ if(isset($_GET['action'])=='dangxuat')
     <title>Sửa</title>
     </head>
     <body>
-    <div class="body" style=" background-color:antiquewhite;">
+    <div class="body" style="background-image: url(image/pngtree-strawberry-daifuku-pink-dessert-ice-cold-summer-picture-image_1551761.jpg);
+            background-repeat:no-repeat;
+            background-size:cover;">
         <div class="menu">
             <div class="MenuItem"> 
                 
