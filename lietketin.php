@@ -13,7 +13,7 @@ if(isset($_GET['action'])=='dangxuat')
 <html>
     <head>
     <?php
-    include 'C:\xampp\htdocs\baitap\connect\config.php';
+    include 'connect\config.php';
     $sql_lietke_tin="SELECT * FROM tintuc ";
     $query_lietke_tin=mysqli_query($conn,$sql_lietke_tin);
     ?>
@@ -48,7 +48,7 @@ if(isset($_GET['action'])=='dangxuat')
             </div>
         </div>
         <div id="main">
-        <h1 id="ha">Sản Phẩm</h1>
+        <h1 id="ha1">Tin tức</h1>
         <div class="but">
             <button type="button" onclick="location.href='lietke.php';" class="csw-btn-buttonquanlymon" >Quản lý món ăn</button>
             <button type="button" onclick="location.href='themtin.php';" class="csw-btn-buttonThem" >Thêm tin</button>

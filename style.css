@@ -387,12 +387,18 @@ display: flex;
 #ha
 {
     text-align:center;
+    color: white;
+}
+#ha1
+{
+    text-align: center;
 }
 .bang
 {
     display:flex;
     justify-content: center;
     text-align: center;
+    color: white;
 }
 
 .popup {

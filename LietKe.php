@@ -13,7 +13,7 @@ if(isset($_GET['action'])=='dangxuat')
 <html>
     <head>
     <?php
-    include 'C:\xampp\htdocs\baitap\connect\config.php';
+    include 'connect\config.php';
     $sql_lietke_sp="SELECT * FROM sanpham ";
     $query_lietke_sp=mysqli_query($conn,$sql_lietke_sp);
     ?>

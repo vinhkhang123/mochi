@@ -13,7 +13,7 @@ if(isset($_GET['action'])=='dangxuat')
 <html>
     <head>
     <?php
-    include 'C:\xampp\htdocs\baitap\connect\config.php';
+    include 'connect\config.php';
     $sql_Sua_sp="SELECT * FROM sanpham WHERE id_MonAn='$_GET[idmonan]' LIMIT 1 ";
     $query_Sua_sp=mysqli_query($conn,$sql_Sua_sp);
     ?>
@@ -29,7 +29,7 @@ if(isset($_GET['action'])=='dangxuat')
     <title>Sửa</title>
     </head>
     <body>
-    <div class="body" style="       background-image: url(image/pngtree-strawberry-daifuku-pink-dessert-ice-cold-summer-picture-image_1551761.jpg);
+    <div class="body" style="       background-image: url(image/Mochi-dessert-1024x562-1.jpg);
             background-repeat:no-repeat;
             background-size:cover;">
         <div class="menu">
@@ -51,7 +51,7 @@ if(isset($_GET['action'])=='dangxuat')
         <div id="main">
         <h1 id="ha">Sửa Món Ăn</h1>
             <div class="bang">
-                <table style="witdth:100%" border="1" text-align:center>
+                <table style="witdth:100%;color:white;" border="1" text-align:center>
                 <?php
                 while($row=mysqli_fetch_array($query_Sua_sp))
                 {
