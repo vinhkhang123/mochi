@@ -46,7 +46,7 @@ if(isset($_GET['action'])=='dangxuat')
             </div>
         </div>
         <div id="main">
-        <h1 id="ha">Sản Phẩm</h1>
+        <h1 id="ha1">Sản Phẩm</h1>
         <div class="but">
             <button type="button" onclick="location.href='them.php';" class="csw-btn-buttonThem" >Thêm</button>
             <button type="button" onclick="location.href='lietketin.php';" class="csw-btn-buttonThem" >Quản lý tin</button>
