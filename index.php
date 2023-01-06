@@ -33,7 +33,7 @@
             <div class="GioiThieu">
                 <div style="width:70%;float:left"class="GioiThieuT">
                         <h3>Chào Mừng Bạn Đã Đến Với Solitude MoChi </h3>
-                        <p>Mochi là một loại bánh truyền thống của Nhật Bản với lớp vỏ bằng bột gạo dẻo thuần khiết là  m từ gạo Mochi. Từ ngàn xưa Mochi đã là món bánh của sự gắn kết gia đình và bè bạn. Ngày nay, mỗi chiếc bánh tượng trưng cho lời cầu chúc may mắn, thịnh vượng và hơn tất cả, là sự sum vầy - Mochi mang đến sự gắn bó và chia sẻ niềm vui.
+                        <p>Mochi là một loại bánh truyền thống của Nhật Bản với lớp vỏ bằng bột gạo dẻo thuần khiết làm từ gạo Mochi. Từ ngàn xưa Mochi đã là món bánh của sự gắn kết gia đình và bè bạn. Ngày nay, mỗi chiếc bánh tượng trưng cho lời cầu chúc may mắn, thịnh vượng và hơn tất cả, là sự sum vầy - Mochi mang đến sự gắn bó và chia sẻ niềm vui.
 
     Sự tuyệt hảo của Mochi có thể cảm nhận ngay ở miếng đầu tiên. Nhưng bạn khó có thể biết những bí quyết riêng ẩn trong hương vị ngọt ngào quyến rũ ấy. Điều khiến Mochi thơm ngon đặc biệt chính là ở sự khéo léo và chỉnh chu đến từng chi tiết trong quá trình tạo ra chiếc bánh. Chúng tôi tin làm bánh Mochi là một môn nghệ thuật - bắt đầu bằng những nguyên liệu cao cấp.</p>
                 <div class="sos">
