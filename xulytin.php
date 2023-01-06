@@ -10,7 +10,7 @@ $noidung=$_POST['noidung'];
 if(isset($_POST['themtin']))
 {
 if (empty($tenbaiviet) ||empty($HinhAnh) ||empty($HinhAnh_time) || empty($tomtat) || empty($noidung)) {
-    header('Location:http://localhost/baitap/themtin.php');
+    header('Location:http://localhost/22005305_DuongVinhKhang/themtin.php');
     return false;
     echo '<script> alert("vui lòng nhập lại");</script>';
 }else
@@ -18,7 +18,7 @@ if (empty($tenbaiviet) ||empty($HinhAnh) ||empty($HinhAnh_time) || empty($tomtat
     $sql_themtin="INSERT INTO tintuc(tenbaiviet,HinhAnh,tomtat,noidung) VALUE ('".$tenbaiviet."','".$HinhAnh_time."','".$tomtat."','".$noidung."')";
 mysqli_query($conn,$sql_themtin);
 move_uploaded_file($HinhAnh_tmp,'ThemHinh/'.$HinhAnh_time);
-header('Location:http://localhost/baitap/lietketin.php');
+header('Location:http://localhost/22005305_DuongVinhKhang/lietketin.php');
 }if(isset($_POST['suatintuc']))
 {
     
@@ -34,7 +34,7 @@ header('Location:http://localhost/baitap/lietketin.php');
     }
     else{
         if (empty($tenbaiviet) || empty($tomtat) || empty($noidung) ) {
-                   header('Location:http://localhost/baitap/lietketin.php');
+                   header('Location:http://localhost/22005305_DuongVinhKhang/lietketin.php');
         
             return false;
             echo '<script> alert("vui lòng nhập lại");</script>';
@@ -42,7 +42,7 @@ header('Location:http://localhost/baitap/lietketin.php');
         $sql_update ="UPDATE tintuc SET tenbaiviet='".$tenbaiviet."',tomtat='".$tomtat."',noidung='".$noidung."' WHERE id='$_GET[id]'";
     }
     mysqli_query($conn,$sql_update);
-    header('Location:http://localhost/baitap/lietketin.php');
+    header('Location:http://localhost/22005305_DuongVinhKhang/lietketin.php');
 }else{
     $id=$_GET['id'];
     $sql="SELECT * FROM tintuc WHERE id='$id' LIMIT 1";
@@ -53,6 +53,6 @@ header('Location:http://localhost/baitap/lietketin.php');
     }
     $sql_xoa="DELETE  FROM tintuc WHERE id='$id'";
     mysqli_query($conn,$sql_xoa);
-    header('Location:http://localhost/baitap/lietketin.php');
+    header('Location:http://localhost/22005305_DuongVinhKhang/lietketin.php');
 }
 ?>
