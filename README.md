@@ -3,7 +3,7 @@
 
 Cách cài đặt source  code
 
-1.Giải nén "22005305_DuongVinhKhang.zip"
+1.Giải nén "22005305_DuongVinhKhang.zip" vào folder www của warmpserver hoặc htdocs của xampp
 
 2.Vào 1 trình duyệt bất kì nhập "localhost/phpmyadmin"
 
